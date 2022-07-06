@@ -34,6 +34,7 @@ import {
   decodeYUV,
   decodeRGB8,
   decodeRGBA8,
+  decodeBGRA8,
   decodeBGR8,
   decodeFloat1c,
   decodeBayerRGGB8,
@@ -142,6 +143,9 @@ function decodeMessageToBitmap(
           break;
         case "rgba8":
           decodeRGBA8(rawData, width, height, image.data);
+          break;
+        case "bgra8":
+          decodeBGRA8(rawData, width, height, image.data);
           break;
         case "bgr8":
         case "8UC3":
